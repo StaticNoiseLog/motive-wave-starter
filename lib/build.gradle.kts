@@ -22,8 +22,7 @@ java {
     }
 }
 
-dependencies {
-}
+dependencies {}
 
 testing {
     suites {
@@ -34,3 +33,11 @@ testing {
         }
     }
 }
+
+val allEnvs = System.getenv()
+allEnvs.forEach { (k, v) -> println("$k => $v") }
+
+val envHome = System.getenv("HOME")
+project.logger.lifecycle("User: ${envHome}")
+
+
